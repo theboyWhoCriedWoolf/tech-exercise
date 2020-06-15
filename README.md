@@ -1,12 +1,12 @@
-# Apollo tutorial
+# Apollo/React Exercise
 
-This is the fullstack app for the [Apollo tutorial](http://apollographql.com/docs/tutorial/introduction.html). 🚀
+This is the fullstack exercise 🚀
 
 ## File structure
 
 The app is split out into two folders:
-- `start`: Starting point for the tutorial
-- `final`: Final version
+
+- `start`: Starting point for the exercise
 
 From within the `start` and `final` directories, there are two folders (one for `server` and one for `client`).
 

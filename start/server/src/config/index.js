@@ -1,0 +1,13 @@
+const {
+  MONGO_USERNAME,
+  MONGO_PASSWORD,
+  MONGO_HOST,
+  MONGO_DB_NAME,
+} = process.env;
+
+export default {
+  DB_USER: MONGO_USERNAME,
+  DB_PASSWORD: MONGO_PASSWORD,
+  DB_HOST: MONGO_HOST,
+  DB_NAME: MONGO_DB_NAME,
+};
