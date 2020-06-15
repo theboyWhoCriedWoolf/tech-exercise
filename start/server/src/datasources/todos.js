@@ -1,13 +1,27 @@
+import { v4 as uuidv4 } from 'uuid';
+
+const todos = [];
+
+const makeTodo = ({ id, title, completed = false }) => ({
+  id,
+  title,
+  completed,
+});
+
 class Todos {
-  constructor({ model }) {
-    this.store = model;
+  constructor() {
+    // add default todo
+    todos.push(
+      makeTodo({
+        id: uuidv4(),
+        title: 'foo',
+      }),
+    );
   }
 
-  async createTodo({ title, id, completed }) {
-    const todo = await this.store.create({ title, id, completed });
-
-    return todo;
-  }
+  async createTodo({ title, id, completed }) {}
+  async updateTodo({ title, id, completed }) {}
+  async removeTodo({ title, id, completed }) {}
 }
 
 export default Todos;

@@ -8,12 +8,9 @@ import logger from './logger';
 
 import Todos from './datasources/todos';
 
-import connectDB from './database/connection';
-import model from './database/model';
-
 // set up any dataSources our resolvers need
 const dataSources = () => ({
-  todos: new Todos({ model }),
+  todos: new Todos(),
 });
 
 // Set up Apollo Server
@@ -25,7 +22,7 @@ const server = new ApolloServer({
   playground: true,
 });
 
-connectDB()
+Promise.resolve()
   .then(() => logger.info('Starting server...'))
   .then(() => server.listen())
   .then(async ({ url }) => {
